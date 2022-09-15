@@ -12,8 +12,6 @@ Sumber: https://techvidvan.com/tutorials/djangos-mvt-architecture/?amp=1
 Ketika ada request dari user yang masuk ke  `urls` akan dilakukan parse argument, lalu dilakukan routing untuk meneruskan argument ke `views` yang terkait, lalu views akan meminta value dari `models`, lalu models akan mengambil value dari database dan mengembalikan value ke `views`. `views` akan menggabungkan `template/katalog.html` dengan value yang sudah didapat dari `models`.
 
 ## Implementasi poin 1 sampai 4:
-`http://localhost:8000`
-`http://localhost:8000`
 1. Pada `katalog/views.py`, buat fungsi yang menerima parameter `request` dan mengembalikan `render(request, "katalog.html", context)` dan dalam fungsi tersebut tambahkan potongan kode yang berfungsi untuk memanggil fungsi query ke model database dan menyimpan hasil query tersebut ke dalam sebuah variabel.
 ```shell
    def show_catalog(request):
