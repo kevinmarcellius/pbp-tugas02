@@ -4,8 +4,9 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 Link aplikasi heroku: https://pbp-tugas02-kevin.herokuapp.com/katalog/
 
 ## Bagan
-​![Django's MVT Architecture](Djangos-MVT-Architecture.jpg (1200×628) (techvidvan.com))
-![Control Flow of MVT](Control-Flow-Of-MVT.jpg (1200×550) (techvidvan.com))
+
+![MVTarchitecture](https://user-images.githubusercontent.com/112237431/190309693-03b61353-1a48-4c99-bdc4-dd3f89b95fa9.jpg)
+![controlflowMVT](https://user-images.githubusercontent.com/112237431/190309713-2f29ae50-f3d9-4de9-b7eb-3077f587d092.jpg)
 Sumber: https://techvidvan.com/tutorials/djangos-mvt-architecture/?amp=1
 
 ## Hubungan urls.py, models.py, views.py, dengan katalog.html
