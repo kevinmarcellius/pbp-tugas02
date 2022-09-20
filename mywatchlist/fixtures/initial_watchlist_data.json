@@ -1,0 +1,112 @@
+
+[
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 1,
+        "fields": {
+            "watched": "no",
+            "title": "The Shawshank Redemption",
+            "rating": 4.6,
+            "release_date": "February 17, 1995",
+            "review": "This is How Movies Should Be Made"
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 2,
+        "fields": {
+            "watched": "no",
+            "title": "The Godfather",
+            "rating": 4.6,
+            "release_date": "August 24, 1972",
+            "review": "A Masterpiece"
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 3,
+        "fields": {
+            "watched": "yes",
+            "title": "The Dark Knight",
+            "rating": 4.5,
+            "release_date": "July 24, 2008",
+            "review": "Top Contender for 'Best Superhero Movie'"
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 4,
+        "fields": {
+            "watched": "no",
+            "title": "The Godfather: Part II",
+            "rating": 4.5,
+            "release_date": "May 15, 1975",
+            "review": "To call it a sequel is a travesty"
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 5,
+        "fields": {
+            "watched": "no",
+            "title": "The Lord of the Rings: The Return of the King",
+            "rating": 4.4,
+            "release_date": "December 17, 2003",
+            "review": "Nothing better."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 6,
+        "fields": {
+            "watched": "no",
+            "title": "Schindler's List",
+            "rating": 4.4,
+            "release_date": "February 18, 1994",
+            "review": "Eye opening"
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 7,
+        "fields": {
+            "watched": "no",
+            "title": "The Lord of the Rings: The Fellowship of the Ring",
+            "rating": 4.4,
+            "release_date": "December 19, 2001",
+            "review": "Middle Earth comes alive...in breathtaking detail. "
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 8,
+        "fields": {
+            "watched": "no",
+            "title": "Star Wars: Episode IV -  A New Hope",
+            "rating": 4.3,
+            "release_date": "January 29, 1978",
+            "review": "Never gets old. "
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 9,
+        "fields": {
+            "watched": "yes",
+            "title": "Back to the Future",
+            "rating": 4.2,
+            "release_date": "December 4, 1985",
+            "review": "A Time -Travelling Classic"}
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 10,
+        "fields": {
+            "watched": "no",
+            "title": "Interstellar",
+            "rating": 4.3,
+            "release_date": "November 7, 2014",
+            "review": "Amongst the best movies of all time. "
+        }
+    }
+]
