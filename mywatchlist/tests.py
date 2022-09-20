@@ -1,17 +1,14 @@
-from django.test import TestCase, Client
-from django.urls import resolve, path
-from .views import index
-
-class MyWatchlistTest(TestCase):
-    def test_mywatchlist_url_is_exist(self):
-        response = Client().get('/mywatchlist')
-        self.assertEqual(response.status_code,200)
-    def test_mywatchlist_xml_is_exist(self):
-        response = Client().get('/mywatchlist/xml')
-        self.assertEqual(response.status_code,200)
-    def test_mywatchlist_json_is_exist(self):
-        response = Client().get('/mywatchlist/json')
-        self.assertEqual(response.status_code,200)
-    def test_mywatchlist_html_is_exist(self):
-        response = Client().get('/mywatchlist/html')
-        self.assertEqual(response.status_code,200)
+from django.test import TestCase
+class ViewsTestCase(TestCase):
+    def test_index_loads_properly(self):
+        response = self.client.get('/mywatchlist/')
+        self.assertEqual(response.status_code, 200)
+    def test_xml_loads_properly(self):
+        response = self.client.get('/mywatchlist/xml/')
+        self.assertEqual(response.status_code, 200)
+    def test_json_loads_properly(self):
+        response = self.client.get('/mywatchlist/json/')
+        self.assertEqual(response.status_code, 200)
+    def test_index_html_properly(self):
+        response = self.client.get('/mywatchlist/html/')
+        self.assertEqual(response.status_code, 200)
