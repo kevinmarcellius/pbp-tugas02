@@ -4,7 +4,7 @@
         "model": "mywatchlist.watchlistitem",
         "pk": 1,
         "fields": {
-            "watched": "no",
+            "watched": false,
             "title": "The Shawshank Redemption",
             "rating": 4.6,
             "release_date": "February 17, 1995",
@@ -15,7 +15,7 @@
         "model": "mywatchlist.watchlistitem",
         "pk": 2,
         "fields": {
-            "watched": "no",
+            "watched": false,
             "title": "The Godfather",
             "rating": 4.6,
             "release_date": "August 24, 1972",
@@ -26,7 +26,7 @@
         "model": "mywatchlist.watchlistitem",
         "pk": 3,
         "fields": {
-            "watched": "yes",
+            "watched": true,
             "title": "The Dark Knight",
             "rating": 4.5,
             "release_date": "July 24, 2008",
@@ -37,7 +37,7 @@
         "model": "mywatchlist.watchlistitem",
         "pk": 4,
         "fields": {
-            "watched": "no",
+            "watched": false,
             "title": "The Godfather: Part II",
             "rating": 4.5,
             "release_date": "May 15, 1975",
@@ -48,7 +48,7 @@
         "model": "mywatchlist.watchlistitem",
         "pk": 5,
         "fields": {
-            "watched": "no",
+            "watched": false,
             "title": "The Lord of the Rings: The Return of the King",
             "rating": 4.4,
             "release_date": "December 17, 2003",
@@ -59,7 +59,7 @@
         "model": "mywatchlist.watchlistitem",
         "pk": 6,
         "fields": {
-            "watched": "no",
+            "watched": false,
             "title": "Schindler's List",
             "rating": 4.4,
             "release_date": "February 18, 1994",
@@ -70,7 +70,7 @@
         "model": "mywatchlist.watchlistitem",
         "pk": 7,
         "fields": {
-            "watched": "no",
+            "watched": false,
             "title": "The Lord of the Rings: The Fellowship of the Ring",
             "rating": 4.4,
             "release_date": "December 19, 2001",
@@ -81,7 +81,7 @@
         "model": "mywatchlist.watchlistitem",
         "pk": 8,
         "fields": {
-            "watched": "no",
+            "watched": false,
             "title": "Star Wars: Episode IV -  A New Hope",
             "rating": 4.3,
             "release_date": "January 29, 1978",
@@ -92,7 +92,7 @@
         "model": "mywatchlist.watchlistitem",
         "pk": 9,
         "fields": {
-            "watched": "yes",
+            "watched": true,
             "title": "Back to the Future",
             "rating": 4.2,
             "release_date": "December 4, 1985",
@@ -102,7 +102,7 @@
         "model": "mywatchlist.watchlistitem",
         "pk": 10,
         "fields": {
-            "watched": "no",
+            "watched": false,
             "title": "Interstellar",
             "rating": 4.3,
             "release_date": "November 7, 2014",
