@@ -63,8 +63,12 @@ path('json/', show_json, name='show_json'),
 ```
 ## Postman
 HTML
+![postman_mywatchlist_html](https://user-images.githubusercontent.com/112237431/191626308-c9f72b87-97b2-411c-b059-697cdd2e81f8.jpg)
 XML
+![postman_mywatchlist_xml](https://user-images.githubusercontent.com/112237431/191626326-88b65fbd-f4f7-400a-82f4-2a6ef336e0e8.jpg)
 JSON
+![mywatchlist_json](https://user-images.githubusercontent.com/112237431/191626340-b0634228-3532-469f-bdd7-4a1eedd4982d.jpg)
+
 
 
 ## Credits
