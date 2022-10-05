@@ -1,6 +1,6 @@
 html, body{
     height: 100%;
-    background-color: black;
+    background-color: white;
 }
 .login {
     height: 100%;
@@ -16,9 +16,16 @@ html, body{
     background-color:  whitesmoke!important;
     border-radius: 10px !important;
 }
+.register-form {
+    width: 760px;
+    height: 600px;
+    padding: 20px;
+    background-color:  whitesmoke!important;
+    border-radius: 10px !important;
+}
 input[type="text"],
 input[type="password"] {
-    background:whitesmoke;
+    background:white;
     color: black;
     border: 2px solid rgb(54, 54, 54);
     border-radius: 10px;
@@ -37,8 +44,8 @@ input[type="password"]:focus {
     padding-top: 20px;
 }
 .btn {
-    background: rgb(0, 199, 0) !important;
-    color: rgb(4, 4, 17) !important;
+    background: black !important;
+    color: white !important;
     transform: translateY(1px);
     font-size: 14px;
     border-radius: 10px !important;
