@@ -1,0 +1,45 @@
+html, body{
+    height: 100%;
+    background-color: black;
+}
+.login {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.login-form {
+    width: 380px;
+    height: 450px;
+    padding: 20px;
+    background-color:  whitesmoke!important;
+    border-radius: 10px !important;
+}
+input[type="text"],
+input[type="password"] {
+    background:whitesmoke;
+    color: black;
+    border: 2px solid rgb(54, 54, 54);
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border: none;
+    background: white;
+    color: black;
+    margin: 0;
+}
+.card-title {
+    font-weight: 500;
+    padding-top: 20px;
+}
+.btn {
+    background: rgb(0, 199, 0) !important;
+    color: rgb(4, 4, 17) !important;
+    transform: translateY(1px);
+    font-size: 14px;
+    border-radius: 10px !important;
+}
