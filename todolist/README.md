@@ -144,6 +144,8 @@ Menurut saya, yang paling baik adalah External CSS karena meningkatkan readabili
 :active
 :focus
 `
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 
+Pada folder `todolist/static`, buat file `style.css` lalu terapkan style yang diinginkan 
 
 
