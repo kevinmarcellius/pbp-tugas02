@@ -133,6 +133,17 @@ Keuntungan internal CSS adalah kita bisa menggunakan class dan ID selector dan t
 Keuntungan penggunaan external CSS adalah karena CSS dipisah dari HTML, code kita akan menjadi lebih bersih dan bisa menerapkan 1 style ke semua element dengan class yang sama, sehingga kita tidak perlu mengulang pekerjaan. Kerugiannya adalah upload banyak file css akan meningkatkan download time.
 
 Menurut saya, yang paling baik adalah External CSS karena meningkatkan readability dan tidak perlu mengulang pekerjaan menerapkan style.
-08:37 Kevin Marcellius https://www.hostinger.com/tutorials/difference-between-inline-external-and-internal-css
-08:39 Kevin Marcellius https://www.w3schools.com/cssref/css_selectors.asp
-08:39 Kevin Marcellius https://www.w3schools.com/tags/
+## Jelaskan tag HTML5 yang kamu ketahui.
+`<p> ` `<h1>` `<br> ` `<table>` `<div>` `<nav> `
+
+## Jelaskan tipe-tipe CSS selector yang kamu ketahui.
+
+`
+.class,
+.class1.class2,
+:active
+:focus
+`
+
+
+
