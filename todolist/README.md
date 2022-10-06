@@ -1,5 +1,5 @@
-[Tugas 4 PBP](#-Tugas-4-PBP)<br>
-[Tugas 5 PBP](#-Tugas-5-PBP)
+[Tugas 4 PBP](#-tugas-4-pbp)<br>
+[Tugas 5 PBP](#-tugas-5-pbp)
 
 # Tugas 4 PBP
 
