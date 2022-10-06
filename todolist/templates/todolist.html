@@ -8,54 +8,59 @@
 {% block content %}
 
 
-
 <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <h1 class="navbar-brand">Hello, {{user}}</h1>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="container-fluid">
+    <h1 class="navbar-brand">Hello, {{user}}</h1>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="logout">
+          <a href="{% url 'todolist:logout' %}"><button class="btn">Logout</button></a>
+        </li>
+        <li>
+          <a href="{% url 'todolist:create-new-task'%}"><button class="btn">Create New Task</button></a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+  <h2>Date : {{date}}</h2>
+  <div class="row g-3">
+    {% for task in list_task %}
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+                <h5 class="card-title">{{task.title}}</h5>
+                <p class="card-text">{{task.date}}</p>
+                <p class="card-text">{{task.description}}</p>
+                {% if not task.is_finished %}
+                <p class="card-text">Status : Incomplete</p>
+                {% else %}
+                <p class="card-text">Status: Complete</p>
+                {% endif %}
+                <p><a href="{% url 'todolist:update-status' task.id %}">
+                  <button class="btn">Update</button>
+                <a href="{% url 'todolist:delete-task' task.id %}">
+        
+                  <button type="button" class="btn btn-delete" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"></path>
+        </svg>
+                    Delete
+                  </button>
+                </a>
+                </p>
+                
+        </div>
+    </div>
+    {% endfor%}
+  </div>
+
+        </a>
       </div>
     </div>
-  </nav>
-  <h2>Date : {{date}}</h2>
-<table>
-    <tr>
-    <th>Date</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Status</th>
-    <th>Checklist</th>
-    <th>Delete Task</th>
-    </tr>
-    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
-    {% for task in list_task %}
-    <tr>
-        <div class="card task">
-        <th>{{task.date}}</th>
-        <th>{{task.title}}</th>
-        <th>{{task.description}}</th>
-        {% if not task.is_finished %}
-        <th><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-          </svg>
+  </div>
+</div>
 
-        </th>
-        {% else %}
-        <th><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-          </svg>
-        </th>
-        {% endif %}
-        <th><a href="{% url 'todolist:update-status' task.id %}"><button>Update</button></a></th>
-        <th><a href="{% url 'todolist:delete-task' task.id %}"><button type="button" class="btn delete-button">Delete</button></a></th>
-    </div>
-    </tr>
-{% endfor %}
-</table>
-
-<button><a href="{% url 'todolist:create-new-task'%}">Create New Task</a></button>
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
 
 {% endblock content %}
