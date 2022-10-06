@@ -1,9 +1,25 @@
 {% extends 'base.html' %}
+{% block meta %}
+<title>To-do list</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css'%}">
 
+{% endblock meta %}
 {% block content %}
-<h1>Hello, {{user}}</h1>
-<h2>Date : {{date}}</h2>
 
+
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <h1 class="navbar-brand">Hello, {{user}}</h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      </div>
+    </div>
+  </nav>
+  <h2>Date : {{date}}</h2>
 <table>
     <tr>
     <th>Date</th>
@@ -16,16 +32,25 @@
     {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
     {% for task in list_task %}
     <tr>
+        <div class="card task">
         <th>{{task.date}}</th>
         <th>{{task.title}}</th>
         <th>{{task.description}}</th>
         {% if not task.is_finished %}
-        <th>unfinished</th>
+        <th><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+          </svg>
+
+        </th>
         {% else %}
-        <th>finished</th>
+        <th><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+          </svg>
+        </th>
         {% endif %}
-        <th><button><a href="{% url 'todolist:update-status' task.id %}">Update</a></button></th>
-        <th><button><a href="{% url 'todolist:delete-task' task.id %}">Delete</a></button></th>
+        <th><a href="{% url 'todolist:update-status' task.id %}"><button>Update</button></a></th>
+        <th><a href="{% url 'todolist:delete-task' task.id %}"><button type="button" class="btn delete-button">Delete</button></a></th>
+    </div>
     </tr>
 {% endfor %}
 </table>
