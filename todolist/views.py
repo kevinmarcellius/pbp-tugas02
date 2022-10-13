@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 import datetime
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 
 # Create your views here.
@@ -79,3 +79,20 @@ def update_status(request, pk):
     task.is_finished = not(task.is_finished)
     task.save()
     return redirect('todolist:show_todolist')
+    
+@login_required(login_url='/todolist/login')
+def show_json(request):
+
+    tasks = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", tasks), content_type="application/json")
+
+def add_task(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        date = datetime.datetime.now()
+        user = request.user
+        new_task = Task(user=user, title=title, description=description, date=date)
+        new_task.save()
+        response = HttpResponseRedirect(reverse("todolist:show_todolist")) 
+        return JsonResponse({"success": True},status=200)
