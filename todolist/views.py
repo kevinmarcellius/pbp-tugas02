@@ -11,6 +11,7 @@ from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
@@ -86,13 +87,20 @@ def show_json(request):
     tasks = Task.objects.filter(user=request.user)
     return HttpResponse(serializers.serialize("json", tasks), content_type="application/json")
 
+@csrf_exempt
+@login_required(login_url="/todolist/login/")
 def add_task(request):
     if request.method == 'POST':
         title = request.POST.get('title')
         description = request.POST.get('description')
-        date = datetime.datetime.now()
+        date = datetime.datetime.today()
         user = request.user
         new_task = Task(user=user, title=title, description=description, date=date)
         new_task.save()
-        response = HttpResponseRedirect(reverse("todolist:show_todolist")) 
-        return JsonResponse({"success": True},status=200)
+        return JsonResponse(
+            {
+            "title": title,
+            "date": date,
+            "description": description,
+            "is_finished": False,
+        }, status=200)
